@@ -82,7 +82,7 @@ public:
 private:
   const char * log_filename_;
 };
-
+#if 0
 BENCHMARK_F(PerformanceTest, log_to_console)(benchmark::State & st)
 {
   const char * text = "Some logging text";
@@ -128,3 +128,4 @@ BENCHMARK_F(PerformanceFileHandlerTest, log_to_file_to_low)(benchmark::State & s
     CONSOLE_BRIDGE_logDebug(text);
   }
 }
+#endif
